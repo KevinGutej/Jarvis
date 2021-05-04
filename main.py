@@ -96,6 +96,20 @@ elif yourchoice == 3:
   elif yourchoice == 3:
     trident()
 
+elif yourchoice == 4:
+    print("Please give me your first number")
+    number1 = int(sys.stdin.readline())
+    print("Please give me yor second number")
+    number2 = int(sys.stdin.readline())
+    totalamount = number1 + number2
+    print(totalamount)
+elif yourchoice == 5:
+    print("Please give me your first number")
+    number1 = int(sys.stdin.readline())
+    print("Please give me yor second number")
+    number2 = int(sys.stdin.readline())
+    totalamount = number1 - number2
+    print(totalamount)
 
 
 
