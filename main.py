@@ -71,6 +71,7 @@ print("2. Show my favorite actors.")
 print("3. Generate weapon.")
 print("4. Give me 2 number for addition")
 print("5. Give me 2 number for subtraction")
+print("6. Algebra")
 
 yourchoice = int(sys.stdin.readline())
 
@@ -111,6 +112,17 @@ elif yourchoice == 5:
     totalamount = number1 - number2
     print(totalamount)
 
+elif yourchoice == 6:
+    print("Give me your x")
+    number1 = float(sys.stdin.readline())
+    number2 = float(sys.stdin.readline())
+    print("Give me your y")
+    number3 = float(sys.stdin.readline())
+    number4 = float(sys.stdin.readline())
+    print("Give me your z")
+    number5 = float(sys.stdin.readline())
+    number6 = float(sys.stdin.readline())
+    print("Sum x %s, sum y %s, sum z %s" % ((number1+number2),(number3+number4),(number5+number6)))
 
 
 
