@@ -1,5 +1,6 @@
 import turtle
 import sys
+from fractions import Fraction
 
 Fruits = ["Apple","Watermelon","Banana","Blueberrie"]
 Actors = {'harry potter' : 'Harry Potter and the Goblet of Fire (2005)',
@@ -71,7 +72,9 @@ print("2. Show my favorite actors.")
 print("3. Generate weapon.")
 print("4. Give me 2 number for addition")
 print("5. Give me 2 number for subtraction")
-print("6. Algebra")
+print("5. Give me 2 number for multiplication")
+print("5. Give me 2 number for division")
+print("8. Algebra")
 
 yourchoice = int(sys.stdin.readline())
 
@@ -109,10 +112,24 @@ elif yourchoice == 5:
     number1 = int(sys.stdin.readline())
     print("Please give me yor second number")
     number2 = int(sys.stdin.readline())
+    totalamount = number1 * number2
+    print(totalamount)
+elif yourchoice == 6:
+    print("Please give me your first number")
+    number1 = int(sys.stdin.readline())
+    print("Please give me yor second number")
+    number2 = int(sys.stdin.readline())
     totalamount = number1 - number2
     print(totalamount)
+elif yourchoice == 7:
+    print("Please give me your first number")
+    number1 = int(sys.stdin.readline())
+    print("Please give me yor second number")
+    number2 = int(sys.stdin.readline())
+    totalamount = number1 / number2
+    print(totalamount)
 
-elif yourchoice == 6:
+elif yourchoice == 8:
     print("Give me your x")
     number1 = float(sys.stdin.readline())
     number2 = float(sys.stdin.readline())
