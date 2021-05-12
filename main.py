@@ -72,10 +72,10 @@ print("2. Show my favorite actors.")
 print("3. Generate weapon.")
 print("4. Give me 2 number for addition")
 print("5. Give me 2 number for subtraction")
-print("5. Give me 2 number for multiplication")
-print("5. Give me 2 number for division")
+print("6. Give me 2 number for multiplication")
+print("7. Give me 2 number for division")
 print("8. Algebra")
-
+print("9. Fractions")
 yourchoice = int(sys.stdin.readline())
 
 if yourchoice == 1:
@@ -107,14 +107,14 @@ elif yourchoice == 4:
     number2 = int(sys.stdin.readline())
     totalamount = number1 + number2
     print(totalamount)
-elif yourchoice == 5:
+elif yourchoice == 6:
     print("Please give me your first number")
     number1 = int(sys.stdin.readline())
     print("Please give me yor second number")
     number2 = int(sys.stdin.readline())
     totalamount = number1 * number2
     print(totalamount)
-elif yourchoice == 6:
+elif yourchoice == 5:
     print("Please give me your first number")
     number1 = int(sys.stdin.readline())
     print("Please give me yor second number")
@@ -140,6 +140,58 @@ elif yourchoice == 8:
     number5 = float(sys.stdin.readline())
     number6 = float(sys.stdin.readline())
     print("Sum x %s, sum y %s, sum z %s" % ((number1+number2),(number3+number4),(number5+number6)))
+
+elif yourchoice == 9:
+  print("Fractions Please chose your option?\n")
+  print("1. Addition?")
+  print("2. Subtraction?")
+  print("3. Division")
+  print("4. Multiplication")
+  yourchoice = int(sys.stdin.readline())
+
+  if yourchoice == 1:
+      print("Please give me first numerator and first denomenetor")
+      number1 = int(sys.stdin.readline())
+      number2 = int(sys.stdin.readline())
+      print("Please give me second numerator and second denomenator")
+      number3 =  int(sys.stdin.readline())
+      number4 =  int(sys.stdin.readline())
+      print (Fraction(number1, number2) + Fraction(number3, number4))
+
+  if yourchoice == 2:
+      print("Please give me first numerator and first denomenetor")
+      number1 = int(sys.stdin.readline())
+      number2 = int(sys.stdin.readline())
+      print("Please give me second numerator and second denomenator")
+      number3 =  int(sys.stdin.readline())
+      number4 =  int(sys.stdin.readline())
+      print (Fraction(number1, number2) - Fraction(number3, number4))
+
+  if yourchoice == 3:
+      print("Please give me first numerator and first denomenetor")
+      number1 = int(sys.stdin.readline())
+      number2 = int(sys.stdin.readline())
+      print("Please give me second numerator and second denomenator")
+      number3 =  int(sys.stdin.readline())
+      number4 =  int(sys.stdin.readline())
+      print (Fraction(number1, number2) / Fraction(number3, number4))
+
+  if yourchoice == 4:
+      print("Please give me first numerator and first denomenetor")
+      number1 = int(sys.stdin.readline())
+      number2 = int(sys.stdin.readline())
+      print("Please give me second numerator and second denomenator")
+      number3 =  int(sys.stdin.readline())
+      number4 =  int(sys.stdin.readline())
+      print (Fraction(number1, number2) * Fraction(number3, number4))
+
+
+
+
+
+
+  elif yourchoice == 2:
+    generatesword()
 
 
 
