@@ -1,6 +1,7 @@
 import turtle
 import sys
 from fractions import Fraction
+import math
 
 Fruits = ["Apple","Watermelon","Banana","Blueberrie"]
 Actors = {'harry potter' : 'Harry Potter and the Goblet of Fire (2005)',
@@ -76,6 +77,7 @@ print("6. Give me 2 number for multiplication")
 print("7. Give me 2 number for division")
 print("8. Algebra")
 print("9. Fractions")
+print("10. Square rooting")
 yourchoice = int(sys.stdin.readline())
 
 if yourchoice == 1:
@@ -150,48 +152,57 @@ elif yourchoice == 9:
   yourchoice = int(sys.stdin.readline())
 
   if yourchoice == 1:
-      print("Please give me first numerator and first denomenetor")
-      number1 = int(sys.stdin.readline())
-      number2 = int(sys.stdin.readline())
-      print("Please give me second numerator and second denomenator")
-      number3 =  int(sys.stdin.readline())
-      number4 =  int(sys.stdin.readline())
-      print (Fraction(number1, number2) + Fraction(number3, number4))
+      print("How many fractions do you want to add?")
+      fractions = int(sys.stdin.readline())
+      z = Fraction()
+      for i in range(0,fractions):
+          print("Give me numerator and denomenator...")
+          numerator = int(sys.stdin.readline())
+          denomenator = int(sys.stdin.readline())
+          z = z + Fraction(numerator,denomenator)
+      print(z)
 
   if yourchoice == 2:
-      print("Please give me first numerator and first denomenetor")
-      number1 = int(sys.stdin.readline())
-      number2 = int(sys.stdin.readline())
-      print("Please give me second numerator and second denomenator")
-      number3 =  int(sys.stdin.readline())
-      number4 =  int(sys.stdin.readline())
-      print (Fraction(number1, number2) - Fraction(number3, number4))
+          print("How many fractions do you want to subtract?")
+          fractions = int(sys.stdin.readline())
+          z = Fraction()
+          for i in range(0, fractions):
+              print("Give me numerator and denomenator...")
+              numerator = int(sys.stdin.readline())
+              denomenator = int(sys.stdin.readline())
+              z = z - Fraction(numerator, denomenator)
+          print(z)
 
   if yourchoice == 3:
-      print("Please give me first numerator and first denomenetor")
-      number1 = int(sys.stdin.readline())
-      number2 = int(sys.stdin.readline())
-      print("Please give me second numerator and second denomenator")
-      number3 =  int(sys.stdin.readline())
-      number4 =  int(sys.stdin.readline())
-      print (Fraction(number1, number2) / Fraction(number3, number4))
+          print("How many fractions do you want to divide?")
+          fractions = int(sys.stdin.readline())
+          z = Fraction()
+          for i in range(0, fractions):
+              print("Give me numerator and denomenator...")
+              numerator = int(sys.stdin.readline())
+              denomenator = int(sys.stdin.readline())
+              z = z / Fraction(numerator, denomenator)
+          print(z)
 
   if yourchoice == 4:
-      print("Please give me first numerator and first denomenetor")
-      number1 = int(sys.stdin.readline())
-      number2 = int(sys.stdin.readline())
-      print("Please give me second numerator and second denomenator")
-      number3 =  int(sys.stdin.readline())
-      number4 =  int(sys.stdin.readline())
-      print (Fraction(number1, number2) * Fraction(number3, number4))
+          print("How many fractions do you want to multiply?")
+          fractions = int(sys.stdin.readline())
+          z = Fraction()
+          for i in range(0, fractions):
+              print("Give me numerator and denomenator...")
+              numerator = int(sys.stdin.readline())
+              denomenator = int(sys.stdin.readline())
+              z = z * Fraction(numerator, denomenator)
+          print(z)
+
+if yourchoice == 10:
+    print("Please give us your number")
+    number1 = int(sys.stdin.readline())
+    print("Please give me your square root")
+    number2 = int(sys.stdin.readline())
+    print(number1 ** number2)
 
 
-
-
-
-
-  elif yourchoice == 2:
-    generatesword()
 
 
 
