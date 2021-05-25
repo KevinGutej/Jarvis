@@ -208,15 +208,12 @@ if yourchoice == 10:
     print(number1 ** number2)
 
 if yourchoice == 11:
-    print("Please give us your numbers?")
-    number1 = int(sys.stdin.readline())
-    Numbers.append(number1)
-    number2 = int(sys.stdin.readline())
-    Numbers.append(number2)
-    number3 = int(sys.stdin.readline())
-    Numbers.append(number3)
-    number4 = int(sys.stdin.readline())
-    Numbers.append(number4)
+    print("Please tell me how many numbers you want:")
+    number = int(sys.stdin.readline())
+    for x in range(0,number):
+        print("Your number is:")
+        number1 = int(sys.stdin.readline())
+        Numbers.append(number1)
     print(statistics.median(Numbers))
     print(sorted(Numbers))
 
@@ -230,15 +227,12 @@ if yourchoice == 12:
         number2 = number2 + 1
 
 if yourchoice == 13:
-    print("Please give me all your numbers:")
-    number1 = int(sys.stdin.readline())
-    Numbers.append(number1)
-    number2 = int(sys.stdin.readline())
-    Numbers.append(number2)
-    number3 = int(sys.stdin.readline())
-    Numbers.append(number3)
-    number4 = int(sys.stdin.readline())
-    Numbers.append(number4)
+    print("How many numbers would you want to add and divide:")
+    number = int(sys.stdin.readline())
+    for x in range(0,number):
+        print("Please give me all your numbers:")
+        number1 = int(sys.stdin.readline())
+        Numbers.append(number1)
     statistics.mean(Numbers)
     print(statistics.mean(Numbers))
 
