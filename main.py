@@ -1,12 +1,14 @@
 import turtle
 import sys
 from fractions import Fraction
+import statistics
 import math
 
 Fruits = ["Apple","Watermelon","Banana","Blueberrie"]
 Actors = {'harry potter' : 'Harry Potter and the Goblet of Fire (2005)',
         'Christopher Daniel Barnes' : 'Spiderman',
         'Jason Farries' : 'InspectorCalls'}
+Numbers = []
 def printElement(list):
     for i in list:
         print(i)
@@ -78,6 +80,7 @@ print("7. Give me 2 number for division")
 print("8. Algebra")
 print("9. Fractions")
 print("10. Square rooting")
+print("11. Median")
 yourchoice = int(sys.stdin.readline())
 
 if yourchoice == 1:
@@ -201,6 +204,22 @@ if yourchoice == 10:
     print("Please give me your square root")
     number2 = int(sys.stdin.readline())
     print(number1 ** number2)
+
+if yourchoice == 11:
+    print("Please give us your numbers?")
+    number1 = int(sys.stdin.readline())
+    Numbers.append(number1)
+    number2 = int(sys.stdin.readline())
+    Numbers.append(number2)
+    number3 = int(sys.stdin.readline())
+    Numbers.append(number3)
+    number4 = int(sys.stdin.readline())
+    Numbers.append(number4)
+    print(statistics.median(Numbers))
+    print(sorted(Numbers))
+
+
+
 
 
 
