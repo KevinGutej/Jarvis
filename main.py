@@ -81,6 +81,8 @@ print("8. Algebra")
 print("9. Fractions")
 print("10. Square rooting")
 print("11. Median")
+print("12. Factors")
+print("13. Mean")
 yourchoice = int(sys.stdin.readline())
 
 if yourchoice == 1:
@@ -218,10 +220,27 @@ if yourchoice == 11:
     print(statistics.median(Numbers))
     print(sorted(Numbers))
 
+if yourchoice == 12:
+    print("Please enter you number:")
+    number1 = int(sys.stdin.readline())
+    number2 = 0
+    for i in range(0,number1 +1):
+        print('%s + %s' % (number1,number2))
+        number1 = number1 - 1
+        number2 = number2 + 1
 
-
-
-
+if yourchoice == 13:
+    print("Please give me all your numbers:")
+    number1 = int(sys.stdin.readline())
+    Numbers.append(number1)
+    number2 = int(sys.stdin.readline())
+    Numbers.append(number2)
+    number3 = int(sys.stdin.readline())
+    Numbers.append(number3)
+    number4 = int(sys.stdin.readline())
+    Numbers.append(number4)
+    statistics.mean(Numbers)
+    print(statistics.mean(Numbers))
 
 
 
