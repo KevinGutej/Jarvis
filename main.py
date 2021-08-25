@@ -2,6 +2,7 @@ import turtle
 import sys
 from fractions import Fraction
 import statistics
+import keyword
 import math
 
 Fruits = ["Apple","Watermelon","Banana","Blueberrie"]
@@ -84,6 +85,7 @@ print("11. Median")
 print("12. Factors")
 print("13. Mean")
 print("14. File Encryption")
+print("15. keyword")
 yourchoice = int(sys.stdin.readline())
 
 if yourchoice == 1:
@@ -299,7 +301,13 @@ if yourchoice == 14:
 
     else:
         print("Invalid number")
-
+if yourchoice == 15:
+    print("Please enter a keyword: ")
+    key_word = input()
+    if keyword.iskeyword(key_word):
+        print("You can't use it.")
+    else:
+        print("You can use it.")
 
 
 
