@@ -3,6 +3,8 @@ import sys
 from fractions import Fraction
 import statistics
 import keyword
+from tkinter import *
+import random
 import math
 
 Fruits = ["Apple","Watermelon","Banana","Blueberrie"]
@@ -86,6 +88,7 @@ print("12. Factors")
 print("13. Mean")
 print("14. File Encryption")
 print("15. keyword")
+print("16. Random shapes and colors")
 yourchoice = int(sys.stdin.readline())
 
 if yourchoice == 1:
@@ -308,6 +311,57 @@ if yourchoice == 15:
         print("You can't use it.")
     else:
         print("You can use it.")
+
+if yourchoice == 16:
+    tk = Tk()
+    img = Canvas(tk, width=400, height=400)
+    img.pack()
+    colors = ["#2F00FF", "#FF1100", "#00FF00", "#FB00FF", "#6200FF", "#FFFB00", "#00FFDD"]
+
+
+    def random_squares(width):
+        x1 = random.randrange(width)
+        y1 = x1
+        x2 = x1 + random.randrange(width)
+        y2 = x2
+        img.create_rectangle(x1, y1, x2, y2, outline=random.choice(colors))
+
+
+    def random_rectangle(width, height):
+        x1 = random.randrange(width)
+        y1 = random.randrange(height)
+        x2 = x1 + random.randrange(width)
+        y2 = y1 + random.randrange(height)
+        img.create_rectangle(x1, y1, x2, y2, outline=random.choice(colors))
+
+
+    def random_circle(width, height):
+        x1 = random.randrange(width)
+        y1 = random.randrange(height)
+        x2 = x1 + random.randrange(width)
+        y2 = y1 + random.randrange(height)
+        img.create_oval(x1, y1, x2, y2, outline=random.choice(colors))
+
+
+    def random_shapes(width, height):
+        random_rectangle(width, height)
+        random_circle(width, height)
+        random_squares(width)
+
+
+    button = Button(tk, text="rectangles", command=lambda: random_rectangle(400, 400))
+    button.pack()
+    button2 = Button(tk, text="squares", command=lambda: random_squares(400))
+    button2.pack()
+    button3 = Button(tk, text="circles", command=lambda: random_circle(400, 400))
+    button3.pack()
+    button4 = Button(tk, text="All shapes", command=lambda: random_shapes(400, 400))
+    button4.pack()
+
+
+
+
+tk.mainloop()
 
 
 
