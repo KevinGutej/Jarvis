@@ -357,11 +357,7 @@ if yourchoice == 16:
     button3.pack()
     button4 = Button(tk, text="All shapes", command=lambda: random_shapes(400, 400))
     button4.pack()
-
-
-
-
-tk.mainloop()
+    tk.mainloop()
 
 
 
