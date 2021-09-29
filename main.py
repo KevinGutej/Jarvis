@@ -89,6 +89,7 @@ print("13. Mean")
 print("14. File Encryption")
 print("15. keyword")
 print("16. Random shapes and colors")
+print("17. Jarvis singing happy birthday")
 yourchoice = int(sys.stdin.readline())
 
 if yourchoice == 1:
@@ -360,8 +361,17 @@ if yourchoice == 16:
     tk.mainloop()
 
 
+if yourchoice == 17:
+    tk = Tk()
+    img = Canvas(tk, width=400, height=400)
+    img.pack()
 
+    img.create_text(150,150, text = "Happy Birthday To You!")
+    img.create_text(150, 200, text="Happy Birthday To You!")
+    img.create_text(150, 250, text="Happy Birthday Dear Kevinnnnnn!")
+    img.create_text(150, 300, text="Happy Birthday To You!")
 
+    tk.mainloop()
 
 
 
