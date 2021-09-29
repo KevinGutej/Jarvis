@@ -6,6 +6,12 @@ import keyword
 from tkinter import *
 import random
 import math
+tk = Tk()
+start_screen = Canvas(tk, width=400, height=400)
+start_screen.pack()
+start_screen.create_text(150,150, text='Welcome')
+start_screen.create_text(150,150, text='Hello, Im Jarvis, your personal assistant :-)')
+start_screen.create_text(150,150, text='What can I do for you today?')
 
 Fruits = ["Apple","Watermelon","Banana","Blueberrie"]
 Actors = {'harry potter' : 'Harry Potter and the Goblet of Fire (2005)',
@@ -71,8 +77,8 @@ def generatesword():
     drawer.left(180)
     drawer.forward(40)
     turtle.mainloop()
-print("Hello, Im Jarvis, your personal assistant.\n")
-print("What should I do?\n")
+
+
 print("1. Show my favorites fruites.")
 print("2. Show my favorite actors.")
 print("3. Generate weapon.")
