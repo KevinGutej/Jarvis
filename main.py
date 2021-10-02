@@ -6,6 +6,8 @@ import keyword
 from tkinter import *
 import random
 import math
+from itertools import combinations
+
 start_tk = Tk()
 start_screen = Canvas(start_tk, width=400, height=100)
 start_screen.pack()
@@ -362,6 +364,26 @@ def birthday_song():
     tk.mainloop()
 
 
+def combos():
+
+
+    print("Please enter a number , and we will find different combinations to make that number: ")
+    number = int(input())
+    list = [1, 5, 3, 7, 9, 2, 3, 4, 3]
+
+    def findNumbers(list, sum):
+        output = []
+        for i in combinations(list, 2):
+            if i[0] + i[1] == sum:
+                output.append((i[0], i[1]))
+
+        if output == []:
+            print("There was no matching pairs")
+        else:
+            return output
+
+    print(findNumbers(list, number))
+
 
 button = Button(start_tk, text="Show my favorites fruites", command=fruits)
 button1 = Button(start_tk, text="Show my favorite actors", command=actors)
@@ -380,6 +402,7 @@ button13 = Button(start_tk, text="File Encryption", command=ceasar_encryptor)
 button14 = Button(start_tk, text="Keyword", command=is_keyword)
 button15 = Button(start_tk, text="Random shapes and colors", command=random_shapes)
 button16 = Button(start_tk, text="Jarvis singing happy birthday", command=birthday_song)
+button17 = Button(start_tk, text="Combinations for your chosen number", command=combos)
 button.pack()
 button1.pack()
 button2.pack()
@@ -397,6 +420,8 @@ button13.pack()
 button14.pack()
 button15.pack()
 button16.pack()
+button17.pack()
+
 start_tk.mainloop()
 
 
