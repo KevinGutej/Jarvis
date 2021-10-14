@@ -9,12 +9,13 @@ import math
 from itertools import combinations
 
 start_tk = Tk()
-start_screen = Canvas(start_tk, width=400, height=100)
+start_screen = Canvas(start_tk, width=600, height=300)
 start_screen.pack()
-
-start_screen.create_text(200,20, text='Welcome',font=('Times', 20))
-start_screen.create_text(200,50, text='Hello, Im Jarvis, your personal assistant :-)',font=('Times', 15))
-start_screen.create_text(200,80, text='What can I do for you today?',font=('Times', 15))
+jarvis_img = PhotoImage(file=('earth.gif'))
+start_screen.create_image(0,0, anchor=NW, image=jarvis_img)
+start_screen.create_text(200,260, text='Welcome',font=('Times', 20))
+start_screen.create_text(200,290, text='Hello, Im Jarvis, your personal assistant :-)',font=('Times', 15))
+start_screen.create_text(200,320, text='What can I do for you today?',font=('Times', 15))
 Numbers = []
 
 def printElement(list):
@@ -366,7 +367,6 @@ def birthday_song():
 
 def combos():
 
-
     print("Please enter a number , and we will find different combinations to make that number: ")
     number = int(input())
     list = [1, 5, 3, 7, 9, 2, 3, 4, 3]
@@ -380,9 +380,29 @@ def combos():
         if output == []:
             print("There was no matching pairs")
         else:
-            return output
+            return [t for t in (set(tuple(i) for i in output))]
 
     print(findNumbers(list, number))
+
+def moving_traiangle():
+    tk = Tk()
+    img = Canvas(tk, width=800, height=800)
+    img.pack()
+    img.create_polygon(10,10,10,60,50,35)
+    def mobilnyTrojkat(zdarzenie):
+        if zdarzenie.keysym == 'Up':
+            img.move(1,0,-3)
+        elif zdarzenie.keysym == 'Down':
+            img.move(1,0,3)
+        elif zdarzenie.keysym == 'Left':
+            img.move(1,-3,0)
+        else:
+            img.move(1,3,0)
+
+    img.bind_all('<KeyPress-Up>', mobilnyTrojkat)
+    img.bind_all('<KeyPress-Down>', mobilnyTrojkat)
+    img.bind_all('<KeyPress-Left>', mobilnyTrojkat)
+    img.bind_all('<KeyPress-Right>', mobilnyTrojkat)
 
 
 button = Button(start_tk, text="Show my favorites fruites", command=fruits)
@@ -403,6 +423,7 @@ button14 = Button(start_tk, text="Keyword", command=is_keyword)
 button15 = Button(start_tk, text="Random shapes and colors", command=random_shapes)
 button16 = Button(start_tk, text="Jarvis singing happy birthday", command=birthday_song)
 button17 = Button(start_tk, text="Combinations for your chosen number", command=combos)
+button18 = Button(start_tk, text="Moving traiangle with W,A,S,D", command=moving_traiangle)
 button.pack()
 button1.pack()
 button2.pack()
@@ -421,6 +442,7 @@ button14.pack()
 button15.pack()
 button16.pack()
 button17.pack()
+button18.pack()
 
 start_tk.mainloop()
 
